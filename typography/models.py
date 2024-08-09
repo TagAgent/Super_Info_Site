@@ -32,6 +32,7 @@ class Publication(models.Model):
     description = models.TextField(verbose_name='Полное содержание')
     image = models.ImageField(verbose_name='Изображение')
     created_date = models.DateField(verbose_name='Дата создания', auto_now_add=True)
+    is_hidden = models.BooleanField(verbose_name='Скрыта', default=False)
 
     class Meta:
         verbose_name_plural = 'Публикации'
@@ -43,4 +44,8 @@ class PublicationComment(models.Model):
     user_name = models.CharField(verbose_name='Имя автора', max_length=50, default='anonymous')
     text = models.TextField(verbose_name='Текст', default='I hacked this world')
     created_date = models.DateField(verbose_name='Дата создания', auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'Комментарии'
+        verbose_name = 'Комментарий'
 

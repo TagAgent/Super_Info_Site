@@ -54,10 +54,13 @@
                         {{ item.short_description }}
                     </p>
                     <div class="d-flex justify-content-between tm-pt-45">
-                        {% for item in item.hashtags.all %}
+
                         <span class="tm-color-primary">Hashtags: </span>
-                        <span class="tm-color-primary">{{ item.created_date }}</span>
+                        {% for item in item.hashtags.all %}
+                        <p class="tm-color-primary">{{ item.title }}, </p>
                         {% endfor %}
+                        <span class="tm-color-primary">{{ item.created_date }}</span>
+
                     </div>
                     <hr>
                     <div class="d-flex justify-content-between">

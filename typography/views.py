@@ -9,7 +9,7 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = {
-            'publication_list': Publication.objects.all()
+            'publication_list': Publication.objects.filter(is_hidden=False)
         }
         return context
 
