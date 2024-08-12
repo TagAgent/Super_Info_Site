@@ -49,3 +49,9 @@ class PublicationComment(models.Model):
         verbose_name_plural = 'Комментарии'
         verbose_name = 'Комментарий'
 
+
+class Feedback(models.Model):
+    user_name = models.CharField(verbose_name='Имя автора', max_length=50)
+    email = models.EmailField()
+    subject = models.TextField()
+    text = models.TextField(verbose_name='Текст')
