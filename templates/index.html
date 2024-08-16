@@ -57,7 +57,7 @@
 
                         <span class="tm-color-primary">Hashtags: </span>
                         {% for item in item.hashtags.all %}
-                        <p class="tm-color-primary">{{ item.title }}, </p>
+                        <p class="tm-color-primary">#{{ item.title }} </p>
                         {% endfor %}
                         <span class="tm-color-primary">{{ item.created_date }}</span>
 
