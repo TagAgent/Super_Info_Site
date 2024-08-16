@@ -12,10 +12,12 @@ class HomeView(TemplateView):
     def get_context_data(self, **kwargs):
         publications = Publication.objects.filter(is_hidden=False)
 
-        paginator = Paginator
+        paginator = Paginator(publications, 1)
+        page_number = self.request.GET['page']
+        page_obj = paginator.page(page_number)
 
         context = {
-            'page_obj': Publication.objects.filter(is_hidden=False)
+            'page_obj': page_obj,
         }
         return context
 
