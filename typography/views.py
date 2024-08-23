@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator
 from django.db.models import Q
 from django.shortcuts import redirect
 from django.views import View
@@ -9,8 +10,14 @@ class HomeView(TemplateView):
     template_name = 'index.html'
 
     def get_context_data(self, **kwargs):
+        publications = Publication.objects.filter(is_hidden=False)
+
+        paginator = Paginator(publications, 2)
+        page_number = self.request.GET['page']
+        page_obj = paginator.page(page_number)
+
         context = {
-            'publication_list': Publication.objects.filter(is_hidden=False)
+            'page_obj': page_obj,
         }
         return context
 

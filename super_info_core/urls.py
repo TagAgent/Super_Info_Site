@@ -14,15 +14,22 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.conf import settings
+from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from typography.views import (HomeView, HomeSearchView,
                               PublicationDetailView, CreatePublicationCommentView,
                               ContactView, CreateFeedbackView)
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('i18n/', include('django.conf.urls.i18n'))
+]
+
+urlpatterns += i18n_patterns(
     path('admin/', admin.site.urls),
     path('home/', HomeView.as_view(), name='home-url'),
     path('home/search/', HomeSearchView.as_view(), name='home-search-url'),
@@ -30,6 +37,6 @@ urlpatterns = [
     path('publication-detail/<int:pk>/create-comment/', CreatePublicationCommentView.as_view()),
     path('contact/', ContactView.as_view(), name='contact-url'),
     path('contact/create-feedback/', CreateFeedbackView.as_view(), name='contact-create-feedback-url'),
-]
+)
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
