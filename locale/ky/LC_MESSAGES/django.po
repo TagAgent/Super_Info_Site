@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-21 19:41+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\super_info_core\settings.py:120
+msgid "Russian"
+msgstr ""
+
+#: .\super_info_core\settings.py:121
+msgid "Kyrgyz"
+msgstr ""
+
+#: .\templates\footer-part.html:6
+msgid "Дизайн: Токтосун"
+msgstr "Дизайн: Токтосун"
+
+#: .\templates\index.html:14 .\templates\publication-detail.html:14
+msgid "Супер инфо"
+msgstr "Супер инфо"
+
+#: .\templates\index.html:20 .\templates\publication-detail.html:20
+#, fuzzy
+#| msgid "Страница"
+msgid "Главная страница"
+msgstr "Бети"
+
+#: .\templates\index.html:24 .\templates\publication-detail.html:24
+msgid "Контакты"
+msgstr "Контактар"
+
+#: .\templates\index.html:51
+msgid "Новинка"
+msgstr "Жаны"
+
+#: .\templates\index.html:76
+msgid "Прошл"
+msgstr "Отуномун"
+
+#: .\templates\index.html:80
+msgid "След"
+msgstr "Кийнки"
+
+#: .\templates\index.html:84
+msgid "Страница"
+msgstr "Бети"
+
+#: .\templates\publication-detail.html:56
+msgid "Хэштеги: "
+msgstr "Хэштегтер"
+
+#: .\templates\publication-detail.html:64
+#, fuzzy
+#| msgid "Коментарии"
+msgid "Комментарии"
+msgstr "Коментарийлер"
+
+#: .\templates\publication-detail.html:100
+msgid "Категории"
+msgstr "Категориялар"
